@@ -205,12 +205,18 @@ def f14():
 
 	quote = info["alt"]
 	msg = Label(main_window, text=quote, font=f17)
-	msg.place(x=10, y=450)
+	msg.place(x=10, y=500)
 		
 				 
 main_window = Tk()
 main_window.title("E.M.S.")
-main_window.geometry("550x500+100+100")
+main_window.geometry("550x550+100+100")
+
+topFrame = Frame(main_window, bd=10, relief=RIDGE)
+topFrame.pack(side=TOP)
+
+label_title = Label(topFrame, text="Employee Management System", font=('arial',20,'bold'))
+label_title.grid(row=0,column=0)
 
 f = ("Arial", 20, "bold")
 f17 = ("Arial", 10, "bold")
